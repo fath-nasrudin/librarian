@@ -131,5 +131,6 @@ dataBook.forEach(book => {
 
 globalThis.onload = () => {
   renderBooksUI();
+  document.querySelector('.yearDisplay').textContent = new Date().getFullYear();
 }
 
