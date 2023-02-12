@@ -142,13 +142,20 @@ addBookButton.addEventListener('click', (e) => {
 
 
 // seed data
-const dataBook = [{ author : 'Carl Sagan', pages: 120, description: 'Lorem Ipsum', isRead: true},
-{title: 'Cosmos', author : 'Carl Sagan', pages: 120, description: 'Lorem Ipsum', isRead: true},
-{title: 'Cosmos', author : 'Carl Sagan', pages: 120, description: 'Lorem Ipsum', isRead: true},];
+const dataBook = [{ author : 'Carl Sagan', pages: 300, description: 'Carl sagan mangrupikeun salahsawios anu aya di bidang kosmik. Bukuna anu judul Cosmos ieu ngabahas rupi-rupi perihal luar angkasa', isRead: true},
+{title: 'Germ, Gun, and Steel', author : 'Jared Diamond', pages: 120, description: 'Lorem Ipsum', isRead: false},
+{title: 'Cakcak Buricak', author : 'Kabayan kababayan', pages: 120, description: 'Cakcak buricak mangrupikeun salahsahiji buku bodor anu teu acan pernah diterbitkeun. Bukuna nyaritakeun tentang anak nu dinamian cakcak buricak. Filosofina supados tiasa nempel di luhur, top person, sareng tiasa nyaangan salarea.', isRead: false},];
 
 dataBook.forEach(book => {
   addBook(book);
 })
+dataBook.forEach(book => {
+  addBook(book);
+})
+dataBook.forEach(book => {
+  addBook(book);
+})
+
 
 globalThis.onload = () => {
   renderBooksUI();
