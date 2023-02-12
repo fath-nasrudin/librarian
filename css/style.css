@@ -6,7 +6,10 @@
 }
 
 button,
-input {
+input,
+textarea,
+select {
+  padding: 2px 8px;
   font-family: inherit;
   font-size: 100%;
 }
@@ -23,7 +26,7 @@ body {
 .container {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 70px 1fr 70px;
 }
 
@@ -47,6 +50,12 @@ body {
 .footer a {
   color: inherit;
   text-decoration: none;
+}
+
+.rightbar {
+  padding: 1rem;
+  border: 1px solid black;
+  background-color: beige;
 }
 
 /* Card Component */
@@ -101,4 +110,31 @@ body {
 /* specific for book */
 .read {
   background-color: rgb(143, 227, 143);
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__control {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 4px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
 }

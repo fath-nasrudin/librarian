@@ -120,6 +120,27 @@ const renderBooksUI = () => {
 }
 
 
+// Form
+const addBookButton = globalThis.document.querySelector('#addBookButton');
+addBookButton.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const formElement = e.target.closest('form');
+  const bookData = {
+    title: formElement.elements.namedItem('title').value,
+    author: formElement.elements.namedItem('author').value,
+    pages: formElement.elements.namedItem('pages').value,
+    description: formElement.elements.namedItem('description').value,
+    isRead: formElement.elements.namedItem('isRead').checked,
+  }
+
+  addBook(bookData);
+  renderBooksUI();
+
+  formElement.reset();
+})
+
+
 // seed data
 const dataBook = [{ author : 'Carl Sagan', pages: 120, description: 'Lorem Ipsum', isRead: true},
 {title: 'Cosmos', author : 'Carl Sagan', pages: 120, description: 'Lorem Ipsum', isRead: true},
